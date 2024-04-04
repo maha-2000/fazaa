@@ -11,6 +11,7 @@ class Fazaa extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Container(
+        child: Text("xxx"),
     )
     );
   }
