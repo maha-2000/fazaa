@@ -1,4 +1,6 @@
+import 'package:fazaa/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
   runApp(const Fazaa());
@@ -10,9 +12,8 @@ class Fazaa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        child: Text("xxx"),
-    )
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
