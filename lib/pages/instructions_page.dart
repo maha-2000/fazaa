@@ -1,4 +1,3 @@
-import 'package:fazaa/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
 import '../models/instructions_model.dart';
@@ -82,7 +81,7 @@ class _InstructionsPageState extends State<InstructionsPage> {
                     _buildItemList(Instructions.earthquake),
                     _buildInstructionsTitle("الحرائق", 1),
                     _buildItemList(Instructions.fire),
-                    _buildInstructionsTitle("فايروس كورونا", 3),
+                    _buildInstructionsTitle("فايروس كورونا", 2),
                     _buildItemList(Instructions.covid19),
                   ],
                 ),
