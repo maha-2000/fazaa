@@ -1,19 +1,20 @@
-import 'package:fazaa/pages/home_page.dart';
+import 'package:fazaa/pages/instructions_page.dart';
+import 'package:fazaa/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
-  runApp(const Fazaa());
+  runApp( Fazaa());
 }
 
 class Fazaa extends StatelessWidget {
-  const Fazaa({super.key});
+   Fazaa({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+       home: InstructionsPage(),
     );
   }
 }
+

@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-  const kPrimaryColor = Colors.deepPurpleAccent;
+   Color kPrimaryColor = Colors.deepPurpleAccent.withOpacity(0.3);
