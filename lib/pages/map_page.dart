@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -36,7 +35,7 @@ class _MapPageState extends State<MapPage> {
             Flexible(child: FlutterMap(
              options: const MapOptions(
                center: LatLng(23.777176,90.399452),
-               zoom: 2,
+               zoom: 8,
              ),
               children: [
                 TileLayer(

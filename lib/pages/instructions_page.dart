@@ -95,38 +95,38 @@ class _InstructionsPageState extends State<InstructionsPage> {
 
   AppBar _buildAppBar() {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {},
-        icon: const Icon(Remix.menu_2_line),
-      ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Remix.search_line,
-          ),
-        ),
-      ],
-      title: const Column(
-        //mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            "كوارث طبيعية",
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.black54,
-            ),
-          ),
-          Text(
-            "الارشادات",
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontStyle: FontStyle.italic,
-            ),
-          ),
-        ],
-      ),
+      // leading: IconButton(
+      //   onPressed: () {},
+      //   icon: const Icon(Remix.menu_2_line),
+      // ),
+      // actions: [
+      //   IconButton(
+      //     onPressed: () {},
+      //     icon: const Icon(
+      //       Remix.search_line,
+      //     ),
+      //   ),
+      // ],
+      // title: const Column(
+      //   //mainAxisAlignment: MainAxisAlignment.center,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     Text(
+      //       "كوارث طبيعية",
+      //       style: TextStyle(
+      //         fontSize: 14,
+      //         color: Colors.black54,
+      //       ),
+      //     ),
+      //     Text(
+      //       "الارشادات",
+      //       style: TextStyle(
+      //         fontWeight: FontWeight.w900,
+      //         fontStyle: FontStyle.italic,
+      //       ),
+      //     ),
+      //   ],
+      // ),
       bottom: TabBar(
         tabs: const [
           Tab(

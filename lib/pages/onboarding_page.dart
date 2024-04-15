@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import '../constans.dart';
+import '../constants.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
@@ -120,18 +120,18 @@ class Onboard {
 final List<Onboard> demo_data = [
   Onboard(
     image: "asset/animations/hands.json",
-          title: "jiohjnegiosdfJMK:",
-          description: "jhuosdfvklnscoijwdkoaslc  njmx,",
+          title: "تطبيق فزعة: ",
+          description: "منصة سهلة للتبرعات والمساعدة في الحالات الطارئة",
   ),
   Onboard(
     image: "asset/animations/money.json",
-    title: "jiohjnegiosdfJMK:",
-    description: "jhuosdfvklnscoijwdkoaslc  njmx,",
+    title: "قم بالتبرع بسهولة وسرعة",
+    description: "استجب لنداء الطوارئ وقدم التبرعات بكل يسر مع تطبيق فزعة",
   ),
   Onboard(
     image: "asset/animations/help&thanks.json",
-    title: "jiohjnegiosdfJMK:",
-    description: "jhuosdfvklnscoijwdkoaslc  njmx,",
+    title: "بضغطة زر",
+    description: "فزعة: تطبيق يستجيب لحالات الطوارئ ويوفر التبرعات بضغطة زر",
   ),
 ];
 

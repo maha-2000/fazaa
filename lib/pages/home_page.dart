@@ -1,4 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:fazaa/constants.dart';
+import 'package:fazaa/pages/map_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,13 +14,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          backgroundColor: Colors.deepPurpleAccent,
+          backgroundColor: kPrimaryColor,
           bottomNavigationBar: CurvedNavigationBar(
-            backgroundColor: Colors.deepPurpleAccent,
-            color: Colors.white38,
-            //animationDuration: Duration(seconds: 1),
+            backgroundColor: kPrimaryColor,
+            color: Colors.white24,
+            animationDuration: const Duration(seconds: 1),
             onTap: (value) {
-              // print(value);
+              if(value == 0){
+
+              }
             },
             items: const [
               Icon(Icons.home,),
