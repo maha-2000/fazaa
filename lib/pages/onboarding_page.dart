@@ -1,3 +1,4 @@
+import 'package:fazaa/tab_bar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../constants.dart';
@@ -60,23 +61,32 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     ),
                   ),
                   const Spacer(),
-                  // SizedBox(
-                  //   height: 60,
-                  //   width: 60,
-                  //   child: ElevatedButton(
-                  //     onPressed: () {
-                  //       _pageController.nextPage(
-                  //           duration: const Duration(microseconds: 300),
-                  //           curve: Curves.ease);
-                  //     },
-                  //     style: ElevatedButton.styleFrom(
-                  //       shape: const CircleBorder(),
-                  //       backgroundColor: kPrimaryColor,
-                  //     ),
-                  //     child: const Icon(Icons.arrow_forward,
-                  //     color: Colors.white,),
-                  //   ),
-                  // ),
+                  SizedBox(
+                    height: 60,
+                    width: 60,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if(_pageIndex == demo_data.length-1){
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (_) => const TabBarScreen(),
+                              )
+                          );
+                        } else {
+                          _pageController.nextPage(
+                              duration: const Duration(microseconds: 300),
+                              curve: Curves.ease);
+                        }
+
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: const CircleBorder(),
+                        backgroundColor: kPrimaryColor,
+                      ),
+                      child: const Icon(Icons.arrow_forward,
+                      color: Colors.white,),
+                    ),
+                  ),
                 ],
               ),
             ],
