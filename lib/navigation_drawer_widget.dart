@@ -18,6 +18,9 @@ class NavigationDrawerWidget extends StatelessWidget {
               padding: EdgeInsets.all(16),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 24,
+                  ),
                   CircleAvatar(
                     radius: 52,
                     backgroundImage: AssetImage(
