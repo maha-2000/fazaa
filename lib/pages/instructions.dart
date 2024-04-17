@@ -13,6 +13,7 @@ class Instructions extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: kPrimaryColor,
           title: const Text(
             "الارشادات",
             style: TextStyle(
@@ -60,106 +61,6 @@ class Instructions extends StatelessWidget {
         ),
         body:  TabBarView(
           children: [
-            // Column(
-            //   children: [
-            //     Image.asset("asset/images/earthquake/N5.jpg",
-            //       height: 200,
-            //       width: double.infinity,
-            //     ),
-            //     Expanded(
-            //       child: ListView.builder(
-            //         itemCount: 10,
-            //         shrinkWrap: true,
-            //         itemBuilder: (context, index) {
-            //           return Container(
-            //             alignment: Alignment.center,
-            //             height: 100,
-            //             color: kPrimaryColor,
-            //             margin: const EdgeInsets.symmetric(vertical: 8),
-            //             child: Text(
-            //               earthquake[index],
-            //               style: const TextStyle(
-            //                 fontSize: 12,
-            //               ),
-            //             ),
-            //           );
-            //         },
-            //       ),
-            //     ),
-            //     Image.asset("asset/images/fire/N1.jpg",
-            //       height: 200,
-            //       width: double.infinity,
-            //     ),
-            //     Expanded(
-            //       child: ListView.builder(
-            //         itemCount: 10,
-            //         shrinkWrap: true,
-            //         itemBuilder: (context, index) {
-            //           return Container(
-            //             alignment: Alignment.center,
-            //             height: 100,
-            //             color: kPrimaryColor,
-            //             margin: const EdgeInsets.symmetric(vertical: 8),
-            //             child: Text(
-            //               fire[index],
-            //               style: const TextStyle(
-            //                 fontSize: 12,
-            //               ),
-            //             ),
-            //           );
-            //         },
-            //       ),
-            //     ),
-            //     Image.asset("asset/images/COVID19/Premium Vector _ Coronavirus poster design with boy wearing mask.jpg",
-            //       height: 200,
-            //       width: double.infinity,
-            //     ),
-            //     Expanded(
-            //       child: ListView.builder(
-            //         itemCount: 11,
-            //         shrinkWrap: true,
-            //         itemBuilder: (context, index) {
-            //           return Container(
-            //             alignment: Alignment.center,
-            //             height: 100,
-            //             color: kPrimaryColor,
-            //             margin: const EdgeInsets.symmetric(vertical: 8),
-            //             child: Text(
-            //               corona[index],
-            //               style: const TextStyle(
-            //                 fontSize: 12,
-            //               ),
-            //             ),
-            //           );
-            //         },
-            //       ),
-            //     ),
-            //     Image.asset("asset/images/oil_spill/Rusty oil barrel in sunset.jpg",
-            //       height: 200,
-            //       width: double.infinity,
-            //     ),
-            //     Expanded(
-            //       child: ListView.builder(
-            //         itemCount: 10,
-            //         shrinkWrap: true,
-            //         itemBuilder: (context, index) {
-            //           return Container(
-            //             alignment: Alignment.center,
-            //             height: 100,
-            //             color: kPrimaryColor,
-            //             margin: const EdgeInsets.symmetric(vertical: 8),
-            //             child: Text(
-            //               oilSpill[index],
-            //               style: const TextStyle(
-            //                 fontSize: 12,
-            //               ),
-            //             ),
-            //           );
-            //         },
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Column(
               children: [
                 Image.asset("asset/images/earthquake/N5.jpg",

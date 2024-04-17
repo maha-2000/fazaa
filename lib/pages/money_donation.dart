@@ -1,20 +1,20 @@
 import 'package:fazaa/constants.dart';
 import 'package:flutter/material.dart';
 
-class ReportingPage extends StatefulWidget {
-  const ReportingPage({super.key});
+class MoneyDonationPage extends StatefulWidget {
+  const MoneyDonationPage({super.key});
 
   @override
-  State<ReportingPage> createState() => _ReportingPageState();
+  State<MoneyDonationPage> createState() => _MoneyDonationPageState();
 }
 
-class _ReportingPageState extends State<ReportingPage> {
+class _MoneyDonationPageState extends State<MoneyDonationPage> {
   final _formfield = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
-  final locationController = TextEditingController();
-  final typeController = TextEditingController();
-  final descController = TextEditingController();
+  final emailController = TextEditingController();
+  final amountController = TextEditingController();
+  final methodController = TextEditingController();
   final detailController = TextEditingController();
 
 
@@ -22,7 +22,7 @@ class _ReportingPageState extends State<ReportingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("قدم بلاغك"),
+        title: const Text("لا تتردد في المساهمة بالمال اليوم!"),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),
@@ -35,14 +35,14 @@ class _ReportingPageState extends State<ReportingPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("asset/donations/reprting.jpg",
+                Image.asset("asset/donations/Money.jpg",
                   height: 200,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller:nameController ,
                   decoration: const InputDecoration(
-                    labelText: "الاسم",
+                    labelText: "الاسم الكامل",
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -57,10 +57,12 @@ class _ReportingPageState extends State<ReportingPage> {
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller: phoneController,
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                     labelText: "رقم الهاتف",
                     //border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.phone),
+                    prefixIcon: Icon(Icons.phone,
+                      color: kPrimaryColor,
+                    ),
                   ),
                   validator: (value) {
                     if(value!.isEmpty){
@@ -73,9 +75,12 @@ class _ReportingPageState extends State<ReportingPage> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller: locationController,
-                  decoration: const InputDecoration(
-                    labelText: "عنوان الإقامة الحالي",
+                  controller: emailController,
+                  decoration:  InputDecoration(
+                    labelText: " البريد الإلكتروني",
+                    prefixIcon: Icon(Icons.email,
+                      color: kPrimaryColor,
+                    ),
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -89,10 +94,10 @@ class _ReportingPageState extends State<ReportingPage> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller: typeController,
+                  controller: amountController,
                   decoration: const InputDecoration(
-                    labelText: "نوع الطارئ ",
-                   // border: OutlineInputBorder(),
+                    labelText: " المبلغ المراد التبرع به ",
+                    // border: OutlineInputBorder(),
                   ),
                   validator: (value) {
                     if(value!.isEmpty){
@@ -105,9 +110,9 @@ class _ReportingPageState extends State<ReportingPage> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller:descController ,
+                  controller:methodController ,
                   decoration: const InputDecoration(
-                    labelText: "وصف موجز للحالة والمشكلة التي تحتاج إلى حل",
+                    labelText: "طريقة الدفع",
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -123,7 +128,7 @@ class _ReportingPageState extends State<ReportingPage> {
                   keyboardType: TextInputType.name,
                   controller: detailController,
                   decoration: const InputDecoration(
-                    labelText: "أي تفاصيل إضافية قد تكون مفيدة للفرق الطبية أو الإنقاذ",
+                    labelText: " معلومات إضافية",
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -141,14 +146,14 @@ class _ReportingPageState extends State<ReportingPage> {
                       //print("Success");
                       nameController.clear();
                       phoneController.clear();
-                      locationController.clear();
-                      typeController.clear();
+                      emailController.clear();
+                      amountController.clear();
                       detailController.clear();
-                      descController.clear();
+                      methodController.clear();
                     }
                   },
                   child: Container(
-                   height: 50,
+                    height: 50,
                     decoration: BoxDecoration(
                       color: kPrimaryColor,
                       borderRadius: BorderRadius.circular(5),
@@ -157,7 +162,7 @@ class _ReportingPageState extends State<ReportingPage> {
                       child: Text(
                         "إرسال",
                         style: TextStyle(
-                          color: Colors.white,
+                         // color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

@@ -3,6 +3,8 @@ import 'package:fazaa/constants.dart';
 import 'package:fazaa/tabs_map.dart';
 import 'package:flutter/material.dart';
 
+import 'navigation_drawer_widget.dart';
+
 class TabBarScreen extends StatefulWidget {
   const TabBarScreen({super.key});
 
@@ -16,8 +18,17 @@ class _TabBarScreenState extends State<TabBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const NavigationDrawerWidget(),
       appBar: AppBar(
-        title: Text(""),
+        actions:  [
+          IconButton(
+           icon: const Icon(Icons.logout),
+            onPressed: () {},
+          ),
+        ],
+        elevation: 40,
+        backgroundColor: kPrimaryColor,
+        title: const Text(""),
       ),
       body: PageView(
         controller: _pageController,
@@ -30,12 +41,12 @@ class _TabBarScreenState extends State<TabBarScreen> {
           pageDetails[0]["pageName"],
           pageDetails[1]["pageName"],
           pageDetails[2]["pageName"],
-          // pageDetails[3]["pageName"],
+          pageDetails[3]["pageName"],
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.white38,
-        backgroundColor: kPrimaryColor,
+        color: kPrimaryColor,
+        backgroundColor: Colors.white38,
         index: _activePageIndex,
         onTap: (value) {
           _pageController.animateToPage(
@@ -54,9 +65,9 @@ class _TabBarScreenState extends State<TabBarScreen> {
           Icon(
             Icons.report,
           ),
-          // Icon(
-          //   Icons.integration_instructions,
-          // ),
+          Icon(
+            Icons.integration_instructions,
+          ),
         ],
       ),
     );

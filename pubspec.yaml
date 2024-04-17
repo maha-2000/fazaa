@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_localization: ^0.2.0
   flutter_form_builder: ^9.2.1
   flutter_map: ^6.1.0
   latlng: ^2.0.7
@@ -74,9 +75,9 @@ flutter:
      - asset/images/fire/
      - asset/images/COVID19/
      - asset/animations/
-     - asset/fonts/
      - asset/fazaa_logo/
      - asset/images/oil_spill/
+     - asset/donations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

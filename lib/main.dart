@@ -8,11 +8,11 @@ import 'package:fazaa/pages/splash_page.dart';
 import 'package:fazaa/tab_bar_screen.dart';
 import 'package:fazaa/tab_item_instructions.dart';
 import 'package:flutter/material.dart';
-import 'donations_form.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 
 
 void main() {
-  runApp( const Fazaa());
+  runApp(  const Fazaa());
 }
 
 class Fazaa extends StatelessWidget {
@@ -21,6 +21,15 @@ class Fazaa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   MaterialApp(
+      // localizationsDelegates: [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocalizations.delegate,
+      // ],
+      // locale: Locale('ar'),
+      // supportedLocales: [
+      //   Locale('ar'),
+      // ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "AmiriR",

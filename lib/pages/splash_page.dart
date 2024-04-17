@@ -58,9 +58,9 @@ class _SplashPageState extends State<SplashPage>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "asset/fazaa_logo/img.png",
-              height: 300,
-              width: 300,
+              "asset/fazaa_logo/فزعة.png",
+              height: 200,
+              width: 200,
             ),
           ],
         ),
