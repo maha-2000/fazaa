@@ -19,12 +19,16 @@ class _MapPageState extends State<MapPage> {
     marker = [
       const Marker(
         point: LatLng(36.2012, 37.1612),
-        child: Icon(Icons.pin_drop, color: Colors.green),
+        child: Icon(Icons.location_on, color: Colors.green),
       ),
-      // const Marker(
-      //   point: LatLng(33.510414,36.278336),
-      //   child :  Icon(Icons.pin_drop,color: Colors.red),
-      // ),
+      const Marker(
+        point: LatLng(36.2167,37.1667),
+        child :  Icon(Icons.location_on,color: Colors.red),
+      ),
+      const Marker(
+        point: LatLng(36.2012,37.1612),
+        child :  Icon(Icons.location_on,color: Colors.orange),
+      ),
     ];
     return Scaffold(
         appBar: AppBar(
@@ -62,7 +66,7 @@ class _MapPageState extends State<MapPage> {
         ),
         body: Container(
           color: Colors.white38,
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.only(bottom: 10),
           child: Center(
             child: Column(
               children: [

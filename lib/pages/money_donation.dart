@@ -17,16 +17,18 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
   final methodController = TextEditingController();
   final detailController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("لا تتردد في المساهمة بالمال اليوم!"),
+        title: const Text(
+          "لا تتردد في المساهمة بالمال اليوم!",
+          style: TextStyle(fontSize: 16),
+        ),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),
-      body:  SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
           child: Form(
@@ -35,18 +37,19 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("asset/donations/Money.jpg",
+                Image.asset(
+                  "asset/donations/Money.jpg",
                   height: 200,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller:nameController ,
+                  controller: nameController,
                   decoration: const InputDecoration(
                     labelText: "الاسم الكامل",
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -57,15 +60,16 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller: phoneController,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     labelText: "رقم الهاتف",
                     //border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.phone,
+                    prefixIcon: Icon(
+                      Icons.phone,
                       color: kPrimaryColor,
                     ),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -76,15 +80,16 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller: emailController,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     labelText: " البريد الإلكتروني",
-                    prefixIcon: Icon(Icons.email,
+                    prefixIcon: Icon(
+                      Icons.email,
                       color: kPrimaryColor,
                     ),
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -100,7 +105,7 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                     // border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -110,13 +115,13 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller:methodController ,
+                  controller: methodController,
                   decoration: const InputDecoration(
                     labelText: "طريقة الدفع",
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -132,7 +137,7 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -142,7 +147,7 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                 ),
                 InkWell(
                   onTap: () {
-                    if(_formfield.currentState!.validate()){
+                    if (_formfield.currentState!.validate()) {
                       //print("Success");
                       nameController.clear();
                       phoneController.clear();
@@ -162,7 +167,7 @@ class _MoneyDonationPageState extends State<MoneyDonationPage> {
                       child: Text(
                         "إرسال",
                         style: TextStyle(
-                         // color: Colors.white,
+                          // color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

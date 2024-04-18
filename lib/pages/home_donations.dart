@@ -22,7 +22,7 @@ class _HomeDonationsState extends State<HomeDonations> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("امنح منزلًا لمن يحتاجه وابنِ جسرًا من الأمل والإنسانية!"),
+        title: const Text("امنح منزلًا لمن يحتاجه وابنِ جسرًا من الأمل والإنسانية!",style: TextStyle(fontSize: 16),),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),

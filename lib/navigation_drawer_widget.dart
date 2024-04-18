@@ -2,6 +2,7 @@ import 'package:fazaa/constants.dart';
 import 'package:fazaa/pages/drawer_donations_page.dart';
 import 'package:fazaa/pages/drawer_reporting_page.dart';
 import 'package:fazaa/pages/instructions.dart';
+import 'package:fazaa/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -49,8 +50,8 @@ class NavigationDrawerWidget extends StatelessWidget {
               height: 16,
             ),
             buildMenuItem(
-              text: 'البلاغات',
-              icon: Icons.report,
+              text: 'إدارة الملف الشخصي',
+              icon: Icons.edit_note,
               onClicked: () => selectedItem(context, 0),
             ),
             const Divider(
@@ -62,9 +63,22 @@ class NavigationDrawerWidget extends StatelessWidget {
               height: 16,
             ),
             buildMenuItem(
-              text: 'التبرعات',
-              icon: Icons.handshake,
+              text: 'بلاغاتي',
+              icon: Icons.report,
               onClicked: () => selectedItem(context, 1),
+            ),
+            const Divider(
+              color: Colors.black54,
+              indent: 50,
+              endIndent: 50,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            buildMenuItem(
+              text: 'تبرعاتي',
+              icon: Icons.handshake,
+              onClicked: () => selectedItem(context, 2),
             ),
             const Divider(
               color: Colors.black54,
@@ -77,7 +91,7 @@ class NavigationDrawerWidget extends StatelessWidget {
             buildMenuItem(
               text: 'الارشادات',
               icon: Icons.integration_instructions,
-              onClicked: () => selectedItem(context, 2),
+              onClicked: () => selectedItem(context, 3),
             ),
             const Divider(
               color: Colors.black54,
@@ -116,18 +130,25 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 0:
         Navigator.of(context).push(
           MaterialPageRoute(
+            builder: (context) => const LoginPage(),
+          ),
+        );
+        break;
+      case 1:
+        Navigator.of(context).push(
+          MaterialPageRoute(
             builder: (context) => const DrawerReportingPage(),
           ),
         );
         break;
-      case 1 :
+      case 2 :
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => const DrawerDonationsPage(),
           ),
         );
         break;
-      case 2:
+      case 3:
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => const Instructions(),

@@ -22,7 +22,7 @@ class _FoodDonationState extends State<FoodDonation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("مشاركتك للطعام تشبع جوعا و تنير أملا"),
+        title: const Text("مشاركتك للطعام تشبع جوعا و تنير أملا",style: TextStyle(fontSize: 16),),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),

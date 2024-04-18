@@ -34,7 +34,7 @@ class _DonationsPageState extends State<DonationsPage> {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             mainAxisSpacing: 50,
             crossAxisSpacing: 50,
-            crossAxisCount: 3,
+            crossAxisCount: 2,
           ),
           children: [
             InkWell(

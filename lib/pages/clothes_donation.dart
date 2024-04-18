@@ -22,7 +22,7 @@ class _ClothesDonationState extends State<ClothesDonation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("قد تكون ملابسك القديمة سببًا في تحسين حياة شخص ما!"),
+        title: const Text("قد تكون ملابسك القديمة سببًا في تحسين حياة شخص ما!",style: TextStyle(fontSize: 16),),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),
