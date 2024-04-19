@@ -26,7 +26,8 @@ class _TimeDonationState extends State<TimeDonation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("تبرع بوقتك لتصنع فرقاً إيجابياً في حياة الآخرين!"),
+        title: const Text("تبرع بوقتك لتصنع فرقاً إيجابياً في حياة الآخرين!",
+        style: TextStyle(fontSize: 14),),
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),

@@ -10,14 +10,14 @@ class NavigationDrawerWidget extends StatelessWidget {
     const NavigationDrawerWidget({super.key});
 
 
-   // Future<String?> getCurrentUser () async{
-   //   var currentUser = FirebaseAuth.instance.currentUser;
-   //   if(currentUser?.email!= null) {
-   //     String? user = FirebaseAuth.instance.currentUser!.email;
-   //     return user;
-   //   }
-   //   return "";
-   // }
+  String? getCurrentUser () {
+     var currentUser = FirebaseAuth.instance.currentUser;
+     if(currentUser?.email!= null) {
+       String? user = FirebaseAuth.instance.currentUser!.email;
+       return user;
+     }
+     return " ";
+   }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class NavigationDrawerWidget extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           children: <Widget>[
-              const Padding(
+               const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
                 children: [
@@ -43,7 +43,8 @@ class NavigationDrawerWidget extends StatelessWidget {
                   SizedBox(
                     height: 12,
                   ),
-                  Text("",
+                  Text(//getCurrentUser() ??
+                      "ayahamoudeh@gmail.com",
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.black54,

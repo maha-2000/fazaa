@@ -97,13 +97,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 20,
                 ),
                 CustomButton(
-                  onTap: () async {
-                    if (formKey.currentState!.validate()) {
+                  onTap: ()  {
+                    //if (formKey.currentState!.validate()) {
                       isLoading = true;
                       setState(() {});
                       try {
-                        await registerUser();
-                        if (!context.mounted) return;
+                        // await registerUser();
+                        // if (!context.mounted) return;
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -121,7 +121,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       }
                       isLoading = false;
                       setState(() {});
-                    } else {}
+                    // }
+                    // else {}
                   },
                   text: "Register",
                 ),

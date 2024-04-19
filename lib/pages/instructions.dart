@@ -73,6 +73,7 @@ class Instructions extends StatelessWidget {
                       shrinkWrap: true,
                         itemBuilder: (context, index) {
                           return Container(
+                            padding: const EdgeInsets.all(8),
                             alignment: Alignment.center,
                             height: 100,
                             color: kPrimaryColor,
@@ -101,6 +102,7 @@ class Instructions extends StatelessWidget {
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Container(
+                        padding: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 100,
                         color: kPrimaryColor,
@@ -129,6 +131,7 @@ class Instructions extends StatelessWidget {
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Container(
+                        padding: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 100,
                         color: kPrimaryColor,
@@ -157,6 +160,7 @@ class Instructions extends StatelessWidget {
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Container(
+                        padding: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 100,
                         color: kPrimaryColor,
