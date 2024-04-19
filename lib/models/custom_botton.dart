@@ -1,3 +1,4 @@
+import 'package:fazaa/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -12,7 +13,7 @@ class CustomButton extends StatelessWidget {
       onTap:onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(8),
         ),
         width: double.infinity,

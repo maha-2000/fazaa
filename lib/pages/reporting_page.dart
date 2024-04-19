@@ -157,7 +157,7 @@ class _ReportingPageState extends State<ReportingPage> {
                       child: Text(
                         "إرسال",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black38,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),

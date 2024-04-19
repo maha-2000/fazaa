@@ -29,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Form(
@@ -39,7 +40,12 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 100,
                 ),
-                Image.asset("asset/fazaa_logo/prophile.jpg", height: 100),
+                const CircleAvatar(
+                  radius: 72,
+                  backgroundImage: AssetImage(
+                    "asset/fazaa_logo/prophile.jpg",
+                  ),
+                ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -124,14 +130,19 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "don't have an account ?",
+                      "ليس لديك حساب ؟ ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, RegisterPage.id);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterPage(),
+                          ),
+                        );
                       },
                       child: const Text(
                         "  Register",

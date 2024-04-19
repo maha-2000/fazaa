@@ -6,9 +6,11 @@ import 'package:fazaa/pages/reporting_page.dart';
 final List<Map<String, dynamic>> pageDetails = [
   {
     "pageName": const MapPage(),
+    //"title" : ""
   },
   {
     "pageName": const Instructions(),
+    "title " : "الإرشادات",
   },
   {
     "pageName": const ReportingPage(),

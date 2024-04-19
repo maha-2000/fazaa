@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fazaa/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
 
 class TimeDonation extends StatefulWidget {
   const TimeDonation({super.key});
@@ -9,6 +11,9 @@ class TimeDonation extends StatefulWidget {
 }
 
 class _TimeDonationState extends State<TimeDonation> {
+  CollectionReference donation =
+      FirebaseFirestore.instance.collection("donation");
+
   final _formfield = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
@@ -16,7 +21,6 @@ class _TimeDonationState extends State<TimeDonation> {
   final amountController = TextEditingController();
   final methodController = TextEditingController();
   final detailController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class _TimeDonationState extends State<TimeDonation> {
         centerTitle: true,
         backgroundColor: kPrimaryColor,
       ),
-      body:  SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
           child: Form(
@@ -35,21 +39,23 @@ class _TimeDonationState extends State<TimeDonation> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("asset/donations/time.jpg",
+                Image.asset(
+                  "asset/donations/time.jpg",
                   height: 200,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller:nameController ,
-                  decoration:  InputDecoration(
+                  controller: nameController,
+                  decoration: InputDecoration(
                     labelText: "الاسم الكامل",
-                    prefixIcon: Icon(Icons.person,
+                    prefixIcon: Icon(
+                      Icons.person,
                       color: kPrimaryColor,
                     ),
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -60,15 +66,16 @@ class _TimeDonationState extends State<TimeDonation> {
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller: phoneController,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     labelText: "رقم الهاتف",
                     //border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.phone,
+                    prefixIcon: Icon(
+                      Icons.phone,
                       color: kPrimaryColor,
                     ),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -79,15 +86,16 @@ class _TimeDonationState extends State<TimeDonation> {
                 TextFormField(
                   keyboardType: TextInputType.name,
                   controller: emailController,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     labelText: " البريد الإلكتروني",
-                    prefixIcon: Icon(Icons.email,
+                    prefixIcon: Icon(
+                      Icons.email,
                       color: kPrimaryColor,
                     ),
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -103,7 +111,7 @@ class _TimeDonationState extends State<TimeDonation> {
                     // border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -113,16 +121,17 @@ class _TimeDonationState extends State<TimeDonation> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
-                  controller:methodController ,
-                  decoration:  InputDecoration(
+                  controller: methodController,
+                  decoration: InputDecoration(
                     labelText: " الوقت المتاح:",
-                    prefixIcon: Icon(Icons.access_time_outlined,
+                    prefixIcon: Icon(
+                      Icons.access_time_outlined,
                       color: kPrimaryColor,
                     ),
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -138,7 +147,7 @@ class _TimeDonationState extends State<TimeDonation> {
                     //border: OutlineInputBorder(),
                   ),
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "هذا الحقل ضروري";
                     }
                   },
@@ -148,16 +157,25 @@ class _TimeDonationState extends State<TimeDonation> {
                 ),
                 InkWell(
                   onTap: () {
-                    if(_formfield.currentState!.validate()){
-                      //print("Success");
-                      nameController.clear();
-                      phoneController.clear();
-                      emailController.clear();
-                      amountController.clear();
-                      detailController.clear();
-                      methodController.clear();
-                    }
-                  },
+                    CollectionReference collRef =
+                        FirebaseFirestore.instance.collection("donation");
+                    collRef.add(
+                      {
+                        "name": nameController.text,
+                        "phone": phoneController.text,
+                        "email": emailController.text,
+                        "skills": amountController.text,
+                        "time": detailController.text,
+                        "more": methodController.text,
+                      },
+                    );
+                    nameController.clear();
+                    phoneController.clear();
+                    emailController.clear();
+                    amountController.clear();
+                    detailController.clear();
+                    methodController.clear();
+                    },
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(

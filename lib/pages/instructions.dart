@@ -52,7 +52,7 @@ class Instructions extends StatelessWidget {
                     TabItemInstructions(title: "الزلازل", count: 8),
                     TabItemInstructions(title: "الحرائق", count: 8),
                     TabItemInstructions(title: " كورونا", count: 9),
-                    TabItemInstructions(title: "تسرب", count: 8,)
+                    TabItemInstructions(title: "تسرب", count: 10,)
                   ],
                 ),
               ),

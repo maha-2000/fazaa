@@ -18,7 +18,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const NavigationDrawerWidget(),
+      drawer:  NavigationDrawerWidget(),
       appBar: AppBar(
         actions:  [
           IconButton(

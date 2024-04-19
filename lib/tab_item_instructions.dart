@@ -18,12 +18,15 @@ class TabItemInstructions extends StatelessWidget {
         children: [
            Text(
              title,
+             style: const TextStyle(
+               fontSize: 10,
+             ),
              overflow:  TextOverflow.ellipsis,
            ),
           count > 0
            ? Container(
             margin: const EdgeInsetsDirectional.only(start: 5),
-            padding: const EdgeInsets.all(3),
+            padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
               color: Colors.grey.shade200,
               shape: BoxShape.circle,

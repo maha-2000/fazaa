@@ -37,159 +37,179 @@ class _DonationsPageState extends State<DonationsPage> {
             crossAxisCount: 2,
           ),
           children: [
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const MoneyDonationPage(),
-                  ),
-                );
-              },
-              splashColor: kPrimaryColor,
-              borderRadius: BorderRadius.circular(15),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "asset/donations/Money.jpg",
-                      height: 250,
-                      fit: BoxFit.cover,
+            Material(
+              elevation: 12,
+              shadowColor: Colors.deepPurpleAccent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const MoneyDonationPage(),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
+                  );
+                },
+                splashColor: kPrimaryColor,
+                borderRadius: BorderRadius.circular(15),
+                child: Stack(
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        "asset/donations/Money.jpg",
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const ClothesDonation(),
-                  ),
-                );
-              },
-              splashColor: kPrimaryColor,
-              borderRadius: BorderRadius.circular(15),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "asset/donations/clothes.jpg",
-                      height: 250,
-                      fit: BoxFit.cover,
+            Material(
+              elevation: 12,
+              shadowColor: Colors.deepPurpleAccent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const ClothesDonation(),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
+                  );
+                },
+                splashColor: kPrimaryColor,
+                borderRadius: BorderRadius.circular(15),
+                child: Stack(
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        "asset/donations/clothes.jpg",
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const FoodDonation(),
-                  ),
-                );
-              },
-              splashColor: kPrimaryColor,
-              borderRadius: BorderRadius.circular(15),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "asset/donations/food.jpg",
-                      height: 250,
-                      fit: BoxFit.cover,
+            Material(
+              elevation: 12,
+              shadowColor: Colors.deepPurpleAccent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const FoodDonation(),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
+                  );
+                },
+                splashColor: kPrimaryColor,
+                borderRadius: BorderRadius.circular(15),
+                child: Stack(
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        "asset/donations/food.jpg",
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const HomeDonations(),
-                  ),
-                );
-              },
-              splashColor: kPrimaryColor,
-              borderRadius: BorderRadius.circular(15),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "asset/donations/home.jpg",
-                      height: 250,
-                      fit: BoxFit.cover,
+            Material(
+              elevation: 12,
+              shadowColor: Colors.deepPurpleAccent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const HomeDonations(),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
+                  );
+                },
+                splashColor: kPrimaryColor,
+                borderRadius: BorderRadius.circular(15),
+                child: Stack(
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        "asset/donations/home.jpg",
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const TimeDonation(),
-                  ),
-                );
-              },
-              splashColor: kPrimaryColor,
-              borderRadius: BorderRadius.circular(15),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      "asset/donations/time.jpg",
-                      height: 250,
-                      fit: BoxFit.cover,
+            Material(
+              elevation: 12,
+              shadowColor: Colors.deepPurpleAccent,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const TimeDonation(),
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
+                  );
+                },
+                splashColor: kPrimaryColor,
+                borderRadius: BorderRadius.circular(15),
+                child: Stack(
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        "asset/donations/time.jpg",
+                        height: 250,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

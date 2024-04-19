@@ -1,3 +1,4 @@
+import 'package:fazaa/pages/profile_page.dart';
 import 'package:fazaa/tab_bar_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Form(
@@ -42,16 +43,20 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(
                   height: 100,
                 ),
-                Image.asset("assets/images/scholar.png", height: 100),
+                const CircleAvatar(
+                  radius: 72,
+                  backgroundImage: AssetImage(
+                    "asset/fazaa_logo/prophile.jpg",
+                  ),
+                ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Scholar Chat",
+                      "سجل دخولك",
                       style: TextStyle(
                         fontSize: 32,
-                        color: Colors.white,
-                        fontFamily: "Pacifico",
+                        color: Colors.black38,
                       ),
                     ),
                     SizedBox(
@@ -65,7 +70,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       "REGISTER",
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.white,
+                        color: Colors.black38,
                       ),
                     ),
                   ],
@@ -127,19 +132,24 @@ class _RegisterPageState extends State<RegisterPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "already have an account",
+                      "لدي حساب مسبقا ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black38,
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
                       },
                       child: const Text(
                         "  Login",
                         style: TextStyle(
-                          color: Color(0xffC7EDE6),
+                          color: Colors.deepPurpleAccent,
                         ),
                       ),
                     ),
@@ -154,7 +164,10 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future<void> registerUser() async {
-    UserCredential user = await FirebaseAuth.instance
-        .createUserWithEmailAndPassword(email: email!, password: password!);
+    UserCredential user =
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: email!,
+      password: password!,
+    );
   }
 }

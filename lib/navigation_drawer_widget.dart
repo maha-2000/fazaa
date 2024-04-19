@@ -2,11 +2,23 @@ import 'package:fazaa/constants.dart';
 import 'package:fazaa/pages/drawer_donations_page.dart';
 import 'package:fazaa/pages/drawer_reporting_page.dart';
 import 'package:fazaa/pages/instructions.dart';
-import 'package:fazaa/pages/profile_page.dart';
+import 'package:fazaa/pages/register_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
-  const NavigationDrawerWidget({super.key});
+    const NavigationDrawerWidget({super.key});
+
+
+   // Future<String?> getCurrentUser () async{
+   //   var currentUser = FirebaseAuth.instance.currentUser;
+   //   if(currentUser?.email!= null) {
+   //     String? user = FirebaseAuth.instance.currentUser!.email;
+   //     return user;
+   //   }
+   //   return "";
+   // }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -15,7 +27,7 @@ class NavigationDrawerWidget extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           children: <Widget>[
-            const Padding(
+              const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
                 children: [
@@ -31,13 +43,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   SizedBox(
                     height: 12,
                   ),
-                  Text("Aya Hamoudeh",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.black54,
-                    ),
-                  ),
-                  Text("ayahamoudeh@gmail.com",
+                  Text("",
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.black54,
@@ -130,7 +136,7 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 0:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const LoginPage(),
+            builder: (context) => const RegisterPage(),
           ),
         );
         break;
@@ -144,7 +150,7 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 2 :
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const DrawerDonationsPage(),
+            builder: (context) =>  const DrawerDonationsPage(),
           ),
         );
         break;

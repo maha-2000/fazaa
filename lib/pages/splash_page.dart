@@ -1,10 +1,7 @@
 import 'package:fazaa/constants.dart';
 import 'package:fazaa/pages/onboarding_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../tab_bar_screen.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -22,7 +19,7 @@ class _SplashPageState extends State<SplashPage>
       SystemUiMode.immersive,
     );
     Future.delayed(
-      const Duration(seconds: 2),
+      const Duration(seconds: 4),
       () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(

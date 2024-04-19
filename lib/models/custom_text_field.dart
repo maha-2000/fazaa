@@ -17,16 +17,16 @@ class CustomFormTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: Colors.white,
+          color: Colors.black38,
         ),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.white,
+            color: Colors.black38,
           ),
         ),
         border: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.white,
+            color: Colors.black38,
           ),
         ),
       ),

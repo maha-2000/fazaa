@@ -18,7 +18,7 @@ class _MapPageState extends State<MapPage> {
     var marker = <Marker>[];
     marker = [
       const Marker(
-        point: LatLng(36.2012, 37.1612),
+        point: LatLng(36.223445, 37.177896),
         child: Icon(Icons.location_on, color: Colors.green),
       ),
       const Marker(
