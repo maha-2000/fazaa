@@ -43,11 +43,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(
                   height: 100,
                 ),
-                const CircleAvatar(
-                  radius: 72,
-                  backgroundImage: AssetImage(
-                    "asset/fazaa_logo/prophile.jpg",
-                  ),
+                Image.asset(
+                  "asset/fazaa_logo/download (1).jpg",
+                  height: 100,
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -97,30 +95,30 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 20,
                 ),
                 CustomButton(
-                  onTap: ()  {
+                  onTap: () {
                     //if (formKey.currentState!.validate()) {
-                      isLoading = true;
-                      setState(() {});
-                      try {
-                        // await registerUser();
-                        // if (!context.mounted) return;
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const TabBarScreen(),
-                          ),
-                        );
-                      } on FirebaseAuthException catch (e) {
-                        if (e.code == 'weak-password') {
-                          showSnackBar(context, "weak password");
-                        } else if (e.code == 'email-already-in-use') {
-                          showSnackBar(context, "email-already-in-use");
-                        }
-                      } catch (e) {
-                        showSnackBar(context, "There was an error");
+                    isLoading = true;
+                    setState(() {});
+                    try {
+                      // await registerUser();
+                      // if (!context.mounted) return;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TabBarScreen(),
+                        ),
+                      );
+                    } on FirebaseAuthException catch (e) {
+                      if (e.code == 'weak-password') {
+                        showSnackBar(context, "weak password");
+                      } else if (e.code == 'email-already-in-use') {
+                        showSnackBar(context, "email-already-in-use");
                       }
-                      isLoading = false;
-                      setState(() {});
+                    } catch (e) {
+                      showSnackBar(context, "There was an error");
+                    }
+                    isLoading = false;
+                    setState(() {});
                     // }
                     // else {}
                   },

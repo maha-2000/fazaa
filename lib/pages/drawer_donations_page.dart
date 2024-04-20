@@ -2,29 +2,39 @@ import 'package:fazaa/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../models/my_card.dart';
 
 class DrawerDonationsPage extends StatelessWidget {
-   const DrawerDonationsPage({super.key});
-
+  const DrawerDonationsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    return  Scaffold(
+    return Scaffold(
       body: Container(
         color: kPrimaryColor,
         child: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance.collection("donation").snapshots(),
           builder: (context, snapshot) {
             List<Row> donationWidgets = [];
-            if(snapshot.hasData)
-            {
+            if (snapshot.hasData) {
               final donations = snapshot.data?.docs.reversed.toList();
-              for(var donation in donations!){
+              for (var donation in donations!) {
                 final donationWidget = Row(
                   children: [
-                    Text(donation["name"]),
-                    Text(donation["email"]),
+                    // Text(donation["name"]),
+                    // Text(donation["email"]),
+                    // Text(donation["skills"])
+                    MyCard(
+                      name: donation["name"],
+                      phone: donation["phone"],
+                      type: donation["skills"],
+                      icon: const Icon(
+                        Icons.stream,
+                        color: Colors.orangeAccent,
+                      ),
+                      details: donation["more"],
+                      status: "قيد المعالجة",
+                    ),
                   ],
                 );
                 donationWidgets.add(donationWidget);
@@ -41,4 +51,3 @@ class DrawerDonationsPage extends StatelessWidget {
     );
   }
 }
-

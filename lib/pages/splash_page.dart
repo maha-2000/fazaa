@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
-
   @override
   State<SplashPage> createState() => _SplashPageState();
 }
@@ -19,7 +18,7 @@ class _SplashPageState extends State<SplashPage>
       SystemUiMode.immersive,
     );
     Future.delayed(
-      const Duration(seconds: 4),
+      const Duration(seconds: 2),
       () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
@@ -29,7 +28,6 @@ class _SplashPageState extends State<SplashPage>
       },
     );
   }
-
   @override
   void dispose() {
     SystemChrome.setEnabledSystemUIMode(
@@ -38,7 +36,6 @@ class _SplashPageState extends State<SplashPage>
     );
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
