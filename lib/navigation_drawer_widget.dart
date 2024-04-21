@@ -44,7 +44,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                     height: 12,
                   ),
                   Text(//getCurrentUser() ??
-                      "ayahamoudeh@gmail.com",
+                      "  ",
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.black54,
